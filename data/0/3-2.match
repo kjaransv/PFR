@@ -1,0 +1,30 @@
+MATCH	0	3	2	1	13
+501_2						
+Óli	18		2	32	32	041271-3959	Svenni						Maggi
+Bjarni			2	16	33	300757-2519	Hjalti						160474-5999
+301								
+Bjarni				2	40	104		040259-3419
+Hjalti				2	2	8		070559-5799
+Svenni				2	16	20		160474-5999
+Óli	20			2	16	87		041271-3959
+Krikket						
+Óli			2	X	X	300757-2519	Svenni						070559-5799
+Bjarni			2			Maggi	Hjalti				X	X	041271-3959
+501						
+Svenni			2	40	76	160474-5999
+Óli	4	20	1	40		Maggi
+Hjalti			2	57	4	040259-3419
+Bjarni			2	40	54	041271-3959
+13						
+Bjarni	Óli	Hjalti	Svenni	0	Maggi	041271-3959	300757-2519	070559-5799	0	2	2	2	2	1	1	1	2	0
+QP Home	QP	180	inn	out	7hit	round 9
+Óli	11				1	0
+Bjarni	8	1				0
+Hjalti	3					0
+Svenni	2					0
+QP Away	QP	180	inn	out	7hit	round 9
+041271-3959	21					1
+Maggi	3					0
+300757-2519	2					0
+160474-5999	2					0
+070559-5799	4					0
