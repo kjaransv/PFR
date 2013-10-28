@@ -1,0 +1,29 @@
+MATCH	1	10	5	10	4
+301					
+Frikki		X	X	1				250984-2949
+110267-4609		X		2	X	X		020260-2389
+Einar		X	X	1				291190-2949
+Bogdan		X	X	1				240588-2429
+501_2						
+110267-4609	X		2	X	X	291190-2949	Einar						250485-3529
+Bogdan	X		1			170881-5329	Frikki		X				240588-2429
+501			
+Frikki	X		2	X	X	291190-2949
+Einar	X	X	1			170881-5329
+Bogdan	X		2	X	X	250984-2949
+110267-4609	X	X	1	X		250485-3529
+Krikket			
+110267-4609	X		1			020260-2389	Einar		X				240588-2429
+Bogdan	X		1			250485-3529	Frikki		X				290284-2799
+13			
+110267-4609	Einar	Bogdan	Frikki	Frikki	250984-2949	240588-2429	290284-2799	291190-2949	290284-2799	1	2	2	2	1	1	1	2	1
+QP Home	QP	180	inn	out	7hit	round 9
+Frikki	1					0
+Bogdan	2					0
+Einar	5					0
+QP Away	QP	180	inn	out	7hit	round 9
+250984-2949	4					0
+020260-2389	1					0
+250485-3529	2					0
+291190-2949						0
+170881-5329	1					0

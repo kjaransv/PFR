@@ -53,11 +53,10 @@ public class TRunner {
 
 	private HashMap<String, IO_Team> FTeamData = new HashMap<String, IO_Team>();
 	private void Add(TRacket ARacket, IO_Team ATeam){
-		TTeam team = ARacket.FTeams.get(Integer.parseInt(ATeam.GetTeam()));
-		IO_Team t = FTeamData.get(team.FID);
+		IO_Team t = FTeamData.get(ATeam.GetTeam());
 		
 		if (t==null){
-			FTeamData.put(team.FID, ATeam);
+			FTeamData.put(ATeam.GetTeam(), ATeam);
 		} else {
 			t.Add(ATeam);
 		}

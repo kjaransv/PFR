@@ -23,6 +23,15 @@ public class TRacket {
 		FMatches.add(AMatch);
 	}
 	
+	public int GetTeamRacketID(String AID){
+		for (int i=0; i<FTeams.size(); i++){
+			if (FTeams.get(i).FID.equals(AID))
+				return i;
+		}
+		
+		return -1;
+	}
+	
 	public String toString(){
 		DecimalFormat df = new DecimalFormat("#.#");
 		
@@ -40,10 +49,14 @@ public class TRacket {
 		int[] legs_l = new int[FTeams.size()];
 		for (int i=0; i<FMatches.size(); i++){
 			TMatch m = FMatches.get(i);
-			legs_w[m.FHomeTeam]+= m.FHomeScore;
-			legs_l[m.FHomeTeam]+= m.FAwayScore;
-			legs_w[m.FAwayTeam]+= m.FAwayScore;
-			legs_l[m.FAwayTeam]+= m.FHomeScore;
+			
+			int home_index = GetTeamRacketID(Integer.toString(m.FHomeTeam));
+			int away_index = GetTeamRacketID(Integer.toString(m.FAwayTeam));
+			
+			legs_w[home_index]+= m.FHomeScore;
+			legs_l[home_index]+= m.FAwayScore;
+			legs_w[away_index]+= m.FAwayScore;
+			legs_l[away_index]+= m.FHomeScore;
 			
 			double home = 0;
 			double away = 0;
@@ -56,13 +69,13 @@ public class TRacket {
 			} else {
 				home = 1;
 			}
-			score[m.FAwayTeam]+= away;
-			score[m.FHomeTeam]+= home;
+			score[away_index]+= away;
+			score[home_index]+= home;
 			
 			// home
-			out[m.FHomeTeam+1][m.FAwayTeam+2] = "<td><big>"+df.format(home)+"</big> <sup>"+m.FHomeScore+"</sup>/<sub>"+m.FAwayScore+"</sub></td>";
+			out[home_index+1][away_index+2] = "<td><big>"+df.format(home)+"</big> <sup>"+m.FHomeScore+"</sup>/<sub>"+m.FAwayScore+"</sub></td>";
 			// away
-			out[m.FAwayTeam+1][m.FHomeTeam+2] = "<td><big>"+df.format(away)+"</big> <sup>"+m.FAwayScore+"</sup>/<sub>"+m.FHomeScore+"</sub></td>";
+			out[away_index+1][home_index+2] = "<td><big>"+df.format(away)+"</big> <sup>"+m.FAwayScore+"</sup>/<sub>"+m.FHomeScore+"</sub></td>";
 		}
 		int[] rank = new int[FTeams.size()];
 		int[] rank2 = new int[FTeams.size()];
